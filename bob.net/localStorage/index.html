@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Bob's Home Page</h1>
+    (See <a href="//alice.net/localStorage/index.html">Alice's Home Page</a>)
+    (See <a href="//carol.net/localStorage/index.html">Carol's Home Page</a>)
+    <hr>
+    <h3>Main-Frame localStorage Widget</h3>
+    <div id="main-widget-anchor"></div>
+
+    <h3>1st-Party iFrame localStorage Widget</h3>
+    <iframe src="frame.html"></iframe>
+
+    <h3>3rd-Party (Alice) iFrame localStorage Widget #1</h3>
+    <iframe src="//alice.net/localStorage/frame.html"></iframe>
+
+    <h3>3rd-Party (Alice) iFrame localStorage Widget #2</h3>
+    <iframe src="//alice.net/localStorage/frame.html"></iframe>
+
+    <script data-target-element-id="main-widget-anchor" src="//theo.net/localStorageWidget.js"></script>
+</body>
+
+</html>
