@@ -1,2 +1,5 @@
 [handlers."/set-cookie"]
 name = "setCookie"
+
+[handlers."/get-cookie"]
+name = "getCookie"

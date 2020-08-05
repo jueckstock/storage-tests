@@ -1,6 +1,7 @@
 (function() {
     const targetElementID = document.currentScript.getAttribute("data-target-element-id");
     window.addEventListener('load', () => {
+        console.log(`STARTING UP: ${window.origin}`);
         const scopeSuffix = Math.random().toString();
 
         const formBlock = document.createElement('div');
@@ -22,7 +23,7 @@
         });
 
         setInterval(() => {
-            const secret = document.cookie.split('; ').find(row => row.startsWith('SECRET=')).split('=')[1];
+            const secret = document.cookie && document.cookie.split('; ').find(row => row.startsWith('SECRET=')).split('=')[1];
             monitorBlock.innerText = secret;
         }, 1000);
 

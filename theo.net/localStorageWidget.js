@@ -1,6 +1,7 @@
 (function() {
     const targetElementID = document.currentScript.getAttribute("data-target-element-id");
     window.addEventListener('load', () => {
+        console.log(`STARTING UP: ${window.origin}`);
         const scopeSuffix = Math.random().toString();
 
         const formBlock = document.createElement('div');
