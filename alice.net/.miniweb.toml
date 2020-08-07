@@ -3,3 +3,7 @@ name = "setCookie"
 
 [handlers."/get-cookie"]
 name = "getCookie"
+
+[handlers."/trackme"]
+name = "toyTracker"
+
