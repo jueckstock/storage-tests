@@ -7,7 +7,16 @@
     (See <a href="//carol.net/netCookies/index.html">Carol's</a> Web Site)
     <hr>
     
-    <img src="//theo.net/trackme" alt="say cheese"/>
+    <img id="pixel1" src="//theo.net/wait.gif" alt="say cheese"/>
+    <img id="pixel2" src="//theo.net/wait.gif" alt="keep saying say cheese"/>
+    <script defer>
+        window.addEventListener('load', () => {
+            document.getElementById('pixel1').src = "//theo.net/trackme";
+            setTimeout(() => {
+                document.getElementById('pixel2').src = "//theo.net/trackme";
+            }, 1000);
+        });
+    </script>
     <iframe src="//theo.net/frame.html" alt="big Theo is watching"></iframe>
 
     <div id="main-widget-anchor"></div>
