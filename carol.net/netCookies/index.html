@@ -7,17 +7,21 @@
     (See <a href="//bob.net/netCookies/index.html">Bob's</a> Web Site)
     <hr>
 
+    <p>(red/red) means cookie tracking completely broken; (red/green) means a new tracking cookie could be set/detected for this page load; (green/green) means cookie tracking resumed from previous session</p>
     <img id="pixel1" src="//theo.net/wait.gif" alt="say cheese"/>
     <img id="pixel2" src="//theo.net/wait.gif" alt="keep saying say cheese"/>
+    <iframe id="pixel3" alt="big Theo is watching"></iframe>
     <script defer>
         window.addEventListener('load', () => {
-            document.getElementById('pixel1').src = "//theo.net/trackme";
+            document.getElementById('pixel1').src = `//theo.net/trackme?${Math.random()}`;
             setTimeout(() => {
-                document.getElementById('pixel2').src = "//theo.net/trackme";
-            }, 1000);
+                document.getElementById('pixel2').src = `//theo.net/trackme?${Math.random()}`;
+            }, 500);
+            setTimeout(() => {
+                document.getElementById('pixel3').src = `//theo.net/frame.html?${Math.random()}`;
+            }, 500);
         });
     </script>
-    <iframe src="//theo.net/frame.html" alt="big Theo is watching"></iframe>
 
     <div id="main-widget-anchor"></div>
     <script defer data-target-element-id="main-widget-anchor" src="//theo.net/netCookiesWidget.js"></script>
